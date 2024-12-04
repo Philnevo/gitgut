@@ -12,16 +12,7 @@ def open_file(n:str) -> list[list[int]]:
 def is_safe(v:list) -> bool:
     """ takes a list of ints and checks if they are 'safe' """
 
-    safe = True
-    
-    if v[0] > v[1]:
-        safe = _is_safe_desc(f_is_safe_desc(v)) or _is_safe_desc(s_is_safe_desc(v))
-
-    elif v[0] < v[1]:
-        safe = _is_safe_asc(f_is_safe_asc(v)) or _is_safe_asc(s_is_safe_asc(v))
-
-    else:
-        safe = _is_safe_desc(f_is_safe_desc(v)) or _is_safe_desc(s_is_safe_desc(v)) or _is_safe_asc(f_is_safe_asc(v)) or _is_safe_asc(s_is_safe_asc(v))
+    safe = _is_safe_desc(f_is_safe_desc(v)) or _is_safe_desc(s_is_safe_desc(v)) or _is_safe_asc(f_is_safe_asc(v)) or _is_safe_asc(s_is_safe_asc(v))
 
     return safe
 
