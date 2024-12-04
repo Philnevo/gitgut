@@ -24,7 +24,7 @@ def f_is_safe_asc(v:list) -> list[int]:
 
     i = 0
     j = 0
-    w = v
+    w = v.copy()
 
     while i + 1 < len(v) and j < 1 :
 
@@ -43,7 +43,7 @@ def s_is_safe_asc(v:list) -> list[int]:
 
     i = 0
     j = 0
-    w = v
+    w = v.copy()
 
     while i + 1 < len(v) and j < 1 :
 
@@ -77,7 +77,7 @@ def f_is_safe_desc(v:list) -> list[int]:
     
     i = 0
     j = 0
-    w = v
+    w = v.copy()
 
     while i + 1 < len(v) and j < 1 :
 
@@ -96,7 +96,7 @@ def s_is_safe_desc(v:list) -> list[int]:
     
     i = 0
     j = 0
-    w = v
+    w = v.copy()
 
     while i + 1 < len(v) and j < 1 :
 
@@ -135,7 +135,7 @@ def count_safe(v:list[list[int]]) -> int:
 
 getlists = open_file("data.txt")
 #print(getlists)
-print(len(getlists))
+#print(len(getlists))
 
 #getlists = [[7,6,4,2,1],[1,2,7,8,9],[9,7,6,2,1],[1,3,2,4,5],[8,6,4,4,1],[1,3,6,7,9]]
 
